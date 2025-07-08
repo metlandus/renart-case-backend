@@ -1,8 +1,8 @@
-# Moissanite Engagement Ring Showcase
+# Engagement Ring Showcase
 
-A clean, responsive full-stack test case project for displaying moissanite engagement rings. Built with:
+A clean, responsive full-stack test case project for displaying engagement rings. Built with:
 
-- **Frontend**: React + Vite + Tailwind CSS v4 (no config file)
+- **Frontend**: React + Vite + Tailwind CSS v4
 - **Fonts**: Local custom fonts (Avenir as default, Montserrat as secondary)
 - **Mockup Assets**: AI-generated and optimized banner images
 - **Backend**: Express.js RESTful API with real-time gold pricing and dynamic price calculation
@@ -19,7 +19,7 @@ You will build a product listing application that consists of two main parts: a 
 - Develop a RESTful API that serves product data from a given JSON file.
 - Each product contains:
   - `name`: Name of the product
-  - `popularityScore`: Popularity score as a percentage
+  - `popularityScore`: Popularity score in the scale of 5
   - `weight`: Weight in grams
   - `images`: Array of 3 image URLs (1 per color)
 - **Dynamic Price Calculation**:
@@ -39,10 +39,10 @@ You will build a product listing application that consists of two main parts: a 
   - **Image Carousel**: supports both arrows and swipe gestures (mobile & desktop)
   - Responsive design matching given mockup layout
 
-#### 3. Bonus Feature (Optional)
+#### 3. Bonus Feature
 - **Filtering (via API query parameters)**:
   - By price range (min/max)
-  - By popularity score (min/max)
+  - By popularity score (min)
 
 ---
 
@@ -66,7 +66,7 @@ You will build a product listing application that consists of two main parts: a 
 [
   {
     "name": "Twist Shank Moissanite Ring",
-    "popularityScore": 92,
+    "popularityScore": 2.5/5,
     "weight": 3.4,
     "images": [
       "/images/ring-gold.jpg",
@@ -87,7 +87,7 @@ price = (popularityScore + 1) * weight * goldPrice;
 
 ### 🔍 Optional Filtering Endpoint
 ```
-GET /products?minPrice=1000&maxPrice=3000&minScore=80
+GET /products?minPrice=1000&maxPrice=3000&mpoularityScore=2.4
 ```
 
 ---
@@ -136,7 +136,7 @@ project-root
 
 ## 🌐 Deployment
 - Frontend deployed via **Vercel**
-- Backend deployed via **Render**, **Railway**, or similar
+- Backend deployed via **Render**
 
 ---
 
